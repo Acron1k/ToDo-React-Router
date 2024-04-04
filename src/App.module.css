@@ -1,0 +1,194 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.app {
+	padding: 2rem;
+	width: 500px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 34px;
+	background: #242424;
+	box-shadow: 7px 7px 20px #1f1f1f, -7px -7px 20px #292929;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #242424;
+	color: rgb(192, 192, 192);
+}
+.filter {
+	display: flex;
+	align-items: center;
+}
+.searchInput {
+	padding: 10px;
+	width: 180px;
+	margin-right: 10px;
+	outline: none;
+	border: none;
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: 7px 7px 13px #1f1f1f, -7px -7px 13px #292929;
+}
+.searchInput:hover {
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: inset 7px 7px 13px #1f1f1f, inset -7px -7px 13px #292929;
+}
+.searchInput:focus {
+	border: none;
+	outline: none;
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: inset 7px 7px 13px #1f1f1f, inset -7px -7px 13px #292929;
+}
+.sortButton {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 13px;
+	cursor: pointer;
+}
+.sortButton:active,
+.sortButton:focus,
+.sortButton.active {
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: inset 7px 7px 13px #1f1f1f, inset -7px -7px 13px #292929;
+}
+.sortButton:hover {
+	border-radius: 13px;
+	background: linear-gradient(145deg, #202020, #272727);
+	box-shadow: 5px 5px 10px #1b1b1b, -5px -5px 10px #2d2d2d;
+}
+.sort {
+	width: 25px;
+}
+.todoElement {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+	margin-top: 40px;
+}
+.checkboxContainer {
+	position: relative;
+}
+.taskContainer {
+	position: relative;
+}
+.svg {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	margin-left: -10px;
+	max-width: 350px;
+}
+.taskText {
+	flex: 1;
+	text-align: left;
+	max-width: 400px;
+	margin-left: 30px;
+}
+.todoText {
+	flex: 1;
+	text-align: left;
+	max-width: 400px;
+}
+.todoControl {
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	right: 0;
+}
+.checkbox {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+}
+.check {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	opacity: 0;
+}
+.label {
+	position: relative;
+}
+.labelText {
+	position: absolute;
+	margin-top: 15px;
+}
+.path2 {
+	stroke-dasharray: 1800;
+	stroke-dashoffset: 1800;
+	transition: 1.5s all;
+}
+.check:checked + label svg g path {
+	stroke-dashoffset: 0;
+}
+
+.addButton {
+	margin-left: 20px;
+}
+.inputNewTodo {
+	height: 42px;
+	width: 350px;
+	padding-left: 10px;
+	border: none;
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: 7px 7px 13px #1f1f1f, -7px -7px 13px #292929;
+}
+.inputNewTodo:hover {
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: inset 7px 7px 13px #1f1f1f, inset -7px -7px 13px #292929;
+}
+.inputNewTodo:focus {
+	border: none;
+	outline: none;
+	border-radius: 13px;
+	background: #242424;
+	box-shadow: inset 7px 7px 13px #1f1f1f, inset -7px -7px 13px #292929;
+}
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+.loader::after {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-bottom-color: #2d6c93;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
